@@ -6,16 +6,16 @@
     },
     "client": [{
         "client_info": {
-            "mobilesdk_app_id": "1:440937825941:android:c78c4514b673910b2cfd9c",
+            "mobilesdk_app_id": "1:440937825941:android:e81efeaa80027e542cfd9c",
             "android_client_info": {
-                "package_name": "com.example.dr_fit"
+                "package_name": "com.gla.dr_fit"
             }
         },
         "oauth_client": [{
-                "client_id": "440937825941-ab6qqigmkf54jkh55l6sc77s48vurd7p.apps.googleusercontent.com",
+                "client_id": "440937825941-n16uojb5k0b7km4nuii5ajs25il71gbi.apps.googleusercontent.com",
                 "client_type": 1,
                 "android_info": {
-                    "package_name": "com.example.dr_fit",
+                    "package_name": "com.gla.dr_fit",
                     "certificate_hash": "60a9bab8bda047503d3fc1da1b97be99f3d5938d"
                 }
             },
