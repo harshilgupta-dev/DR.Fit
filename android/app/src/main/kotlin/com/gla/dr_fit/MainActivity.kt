@@ -1,4 +1,4 @@
-package com.example.dr_fit
+package com.gla.dr_fit
 
 import io.flutter.embedding.android.FlutterActivity
 

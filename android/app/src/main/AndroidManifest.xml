@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dr_fit">
+    package="com.gla.dr_fit">
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="dr_fit"
+        android:label="DrFit"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

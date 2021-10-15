@@ -1,0 +1,40 @@
+{
+    "project_info": {
+        "project_number": "440937825941",
+        "project_id": "dr-fit-9e079",
+        "storage_bucket": "dr-fit-9e079.appspot.com"
+    },
+    "client": [{
+        "client_info": {
+            "mobilesdk_app_id": "1:440937825941:android:e81efeaa80027e542cfd9c",
+            "android_client_info": {
+                "package_name": "com.gla.dr_fit"
+            }
+        },
+        "oauth_client": [{
+                "client_id": "440937825941-n16uojb5k0b7km4nuii5ajs25il71gbi.apps.googleusercontent.com",
+                "client_type": 1,
+                "android_info": {
+                    "package_name": "com.gla.dr_fit",
+                    "certificate_hash": "60a9bab8bda047503d3fc1da1b97be99f3d5938d"
+                }
+            },
+            {
+                "client_id": "440937825941-lfkfjf4nes78qilorl1ori3iqumvfj2n.apps.googleusercontent.com",
+                "client_type": 3
+            }
+        ],
+        "api_key": [{
+            "current_key": "AIzaSyDFVQR_3cxCC9Zfg3J4bSdd4ldFtdHfBPE"
+        }],
+        "services": {
+            "appinvite_service": {
+                "other_platform_oauth_client": [{
+                    "client_id": "440937825941-lfkfjf4nes78qilorl1ori3iqumvfj2n.apps.googleusercontent.com",
+                    "client_type": 3
+                }]
+            }
+        }
+    }],
+    "configuration_version": "1"
+}
