@@ -1,5 +1,6 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/62786689/138323250-4d2a5d5a-061b-4dae-86ac-f52fba02b59d.jpg" width="60%" />
+  
+  <img src="https://user-images.githubusercontent.com/62786689/138328093-9069019b-083a-41eb-ab68-3480ee235fbe.jpg" width="90%" />
 </p>
 
 <h1 align=center>Dr. Fit - Fitness Mobile Application</h1>
