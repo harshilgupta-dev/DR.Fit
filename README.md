@@ -1,16 +1,34 @@
-# dr_fit
+<p align="center">
+  
+  <img src="https://user-images.githubusercontent.com/62786689/138328093-9069019b-083a-41eb-ab68-3480ee235fbe.jpg" width="90%" />
+</p>
 
-A new Flutter project.
+<h1 align=center>Dr. Fit - Fitness Mobile Application</h1>
 
-## Getting Started
+DR.FIT is a mobile application that helps users to plan exercise according to days,
+chat with the instructor, and also they can buy fitness products according to their
+needs. We will also be adding yoga and meditation features by which users can
+plan their meditation and yoga according to desired days. Exercises, yoga, and
+meditation are well planned in this application. It goes from beginner to advanced
+levels and the user will not feel this transition gap and can do it smoothly.
 
-This project is a starting point for a Flutter application.
+It also calculates the BMI (Body Mass Index) of the user which helps the user to
+know how much he/she has to lose or gain weight according to his/her personality.
+DR.Fit is highly secure because we are using Google authentication by which
+users can log in and sign up to the application easily and securely. By the feature of
+chatting with the instructor, the user can interact one-to-one with the instructor and
+can resolve his/her doubts and problems.
 
-A few resources to get you started if this is your first Flutter project:
+## Features of the Application:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Daily exercise, meditation, yoga, etc.
+- Chat with the instructor and get trained by the instructor.
+- Online Shopping for fitness products.
+- Body Mass Index tracker.
+- Beginner to advance levels of exercises.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<h2 align="center">
+    <p>
+       Thank You
+    </p>
+</h2>
