@@ -1,8 +1,10 @@
+// import 'package:dr_fit/screens/excercise_category_screen.dart';
+// import 'package:dr_fit/screens/excercise_list_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:dr_fit/screens/landin_screen.dart';
+import 'landin_screen.dart';
 import 'package:dr_fit/utils/authentication_service.dart';
 
 class LoginScreen extends StatefulWidget {

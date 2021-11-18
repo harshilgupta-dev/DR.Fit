@@ -1,4 +1,6 @@
-import 'package:dr_fit/screens/login_screen.dart';
+import 'excercise_category_screen.dart';
+// import 'excercise_list_screen.dart';
+import 'login_screen.dart';
 import 'package:dr_fit/utils/authentication_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +37,16 @@ class LandingScreen extends StatelessWidget {
             ),
             Center(
               child: ElevatedButton(
-                  onPressed: () async {
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (ctx) => const ExcerciseCategoryScreen()));
+                },
+                child: const Text('Excercise Srcreen'),
+              ),
+            ),
+            Center(
+              child: ElevatedButton(
+                  onPressed: () {
                     AuthenticationService.signOut(context: context);
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
                         builder: (ctx) => const LoginScreen()));

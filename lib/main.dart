@@ -1,3 +1,5 @@
+// import 'package:dr_fit/screens/excercise_category_screen.dart';
+// import 'package:dr_fit/screens/excercise_list_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -22,6 +24,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColorLight: Constants.primaryLight,
+        appBarTheme: AppBarTheme(
+          color: Constants.primaryLight,
+        ),
       ),
       home: FirebaseAuth.instance.currentUser != null
           ? LandingScreen(
