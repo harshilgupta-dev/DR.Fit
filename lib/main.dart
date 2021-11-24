@@ -1,10 +1,9 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:dr_fit/screens/splash_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-import './screens/landin_screen.dart';
 import './utils/constants.dart';
-import 'package:dr_fit/screens/login_screen.dart';
 
 import 'helpers/custom_page_transition_builder.dart';
 
@@ -31,11 +30,7 @@ class MyApp extends StatelessWidget {
           color: Constants.primaryLight,
         ),
       ),
-      home: FirebaseAuth.instance.currentUser != null
-          ? LandingScreen(
-              user: FirebaseAuth.instance.currentUser,
-            )
-          : const LoginScreen(),
+      home: const SplashScreen(),
     );
   }
 }
