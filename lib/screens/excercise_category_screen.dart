@@ -1,7 +1,7 @@
 import 'package:dr_fit/models/excercise.dart';
 import 'package:dr_fit/models/excercise_category.dart';
 import 'package:dr_fit/screens/excercise_list_screen.dart';
-// import 'package:dr_fit/utils/constants.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class ExcerciseCategoryScreen extends StatelessWidget {
@@ -52,9 +52,10 @@ class ExcerciseCategoryScreen extends StatelessWidget {
                         colorFilter: ColorFilter.mode(
                             Colors.black.withOpacity(0.3), BlendMode.dstATop),
                         fit: BoxFit.cover,
-                        image: NetworkImage(excercises[i].image)),
+                        image: CachedNetworkImageProvider(
+                          excercises[i].image,
+                        )),
                   ),
-                  // color: Constants.primaryLight,
                   child: Center(
                       child: Text(
                     excercises[i].title.toUpperCase(),
