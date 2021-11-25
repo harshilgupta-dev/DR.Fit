@@ -1,16 +1,16 @@
 import 'package:dr_fit/models/excercise.dart';
-import 'package:dr_fit/screens/excercise_description_screen.dart';
+import 'package:dr_fit/screens/description_screen.dart';
 import 'package:flutter/material.dart';
 
-class ExcerciseListScreen extends StatelessWidget {
-  const ExcerciseListScreen({Key? key, required this.data}) : super(key: key);
+class ListScreen extends StatelessWidget {
+  const ListScreen({Key? key, required this.data}) : super(key: key);
   final List<Excercise> data;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Excercise'),
+        title: Text(data[0].category.toUpperCase()),
         elevation: 0,
       ),
       body: SafeArea(
@@ -25,7 +25,7 @@ class ExcerciseListScreen extends StatelessWidget {
                 ),
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (ctx) => ExcerciseDescriptionScreen(
+                      builder: (ctx) => DescriptionScreen(
                             data: data[i],
                           )));
                 },

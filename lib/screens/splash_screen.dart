@@ -1,7 +1,7 @@
 import 'dart:async';
+import 'package:dr_fit/screens/mainpage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'landin_screen.dart';
 import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -24,9 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
           builder: (context) => FirebaseAuth.instance.currentUser != null
-              ? LandingScreen(
-                  user: FirebaseAuth.instance.currentUser,
-                )
+              ? const MainPage()
               : const LoginScreen(),
         ));
   }

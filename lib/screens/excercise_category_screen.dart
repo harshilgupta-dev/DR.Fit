@@ -1,6 +1,6 @@
 import 'package:dr_fit/models/excercise.dart';
 import 'package:dr_fit/models/excercise_category.dart';
-import 'package:dr_fit/screens/excercise_list_screen.dart';
+import 'package:dr_fit/screens/list_screen.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +41,7 @@ class ExcerciseCategoryScreen extends StatelessWidget {
                     return newData;
                   });
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (ctx) => ExcerciseListScreen(
+                      builder: (ctx) => ListScreen(
                             data: newData,
                           )));
                 },
