@@ -1,12 +1,11 @@
-// import 'package:dr_fit/screens/excercise_category_screen.dart';
-// import 'package:dr_fit/screens/excercise_list_screen.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:dr_fit/screens/splash_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-import './screens/landin_screen.dart';
 import './utils/constants.dart';
-import 'package:dr_fit/screens/login_screen.dart';
+
+import 'helpers/custom_page_transition_builder.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,16 +22,21 @@ class MyApp extends StatelessWidget {
       title: 'Fitness App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        pageTransitionsTheme: PageTransitionsTheme(builders: {
+          TargetPlatform.android: CustomPageTransitionBuilder(),
+        }),
         primaryColorLight: Constants.primaryLight,
         appBarTheme: AppBarTheme(
-          color: Constants.primaryLight,
+          color: Constants.appBarColor,
+          titleTextStyle: const TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+          ),
+          iconTheme: const IconThemeData(color: Colors.black),
         ),
       ),
-      home: FirebaseAuth.instance.currentUser != null
-          ? LandingScreen(
-              user: FirebaseAuth.instance.currentUser,
-            )
-          : const LoginScreen(),
+      home: const SplashScreen(),
     );
   }
 }

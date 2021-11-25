@@ -1,10 +1,7 @@
-// import 'package:dr_fit/screens/excercise_category_screen.dart';
-// import 'package:dr_fit/screens/excercise_list_screen.dart';
+import 'package:dr_fit/screens/mainpage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import 'landin_screen.dart';
 import 'package:dr_fit/utils/authentication_service.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -71,25 +68,22 @@ class _LoginScreenState extends State<LoginScreen> {
                     : ElevatedButton(
                         style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
-                                Theme.of(context).primaryColorLight)),
+                                const Color.fromARGB(255, 42, 69, 78))),
                         onPressed: () async {
                           setState(() {
                             _loading = true;
                           });
 
-                          User? user =
-                              await AuthenticationService.signInWithGoogle(
-                                  context: context);
+                          await AuthenticationService.signInWithGoogle(
+                              context: context);
 
                           setState(() {
                             _loading = false;
                           });
                           if (FirebaseAuth.instance.currentUser != null) {
-                            Navigator.of(context)
-                                .pushReplacement(MaterialPageRoute(
-                                    builder: (ctx) => LandingScreen(
-                                          user: user,
-                                        )));
+                            Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                    builder: (ctx) => const MainPage()));
                           }
                         },
                         child: Container(

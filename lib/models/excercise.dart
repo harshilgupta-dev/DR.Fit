@@ -37,13 +37,55 @@ List<Excercise> excerciseList = [
   Excercise(
       5,
       '1 2 Burpees',
-      '\n\nStart in a staggered fight stance. \n\nPlant your hands on the ground and shoot your legs out to form a plank. \n\nBring your legs back in, plant both feet on the ground and return to your staggered fight stance. \n\nThrow two straight punches, left then right. Again!',
+      'Start in a staggered fight stance. \n\nPlant your hands on the ground and shoot your legs out to form a plank. \n\nBring your legs back in, plant both feet on the ground and return to your staggered fight stance. \n\nThrow two straight punches, left then right. Again!',
       'assets/images/6.jpg',
       'triceps'),
   Excercise(
       6,
       'Alternating side planks',
-      '\n\nFrom a full plank position, shift your weight over to one side and rotate your body so that you can raise your arm. \n\nReturn controlled to plank and repeat on the other side.',
+      'From a full plank position, shift your weight over to one side and rotate your body so that you can raise your arm. \n\nReturn controlled to plank and repeat on the other side.',
       'assets/images/7.jpeg',
-      'triceps')
+      'triceps'),
+  Excercise(
+      7,
+      'uare Single Leg Hops',
+      'Stand on one leg with the other leg bent at 90 degrees in front of you and your hands on your hips. \n\nCreate an imaginary square around you. \n\nHop on one leg to each of the four corners, hopping back to the middle before proceeding to the next corner. \n\nSwitch legs halfway through the exercise!',
+      'assets/images/8.png',
+      'hamstrings'),
+  Excercise(
+      8,
+      'Advanced Left Pyramid',
+      'Stand facing the top of your mat with your feet 3 feet apart and with your left foot forward. \n\nGrab your opposite elbow behind your back. \n\nInhale and arch your chest forward. \n\nExhale and fold forward over your left leg.',
+      'assets/images/9.jpg',
+      'traps'),
+  Excercise(
+      9,
+      'Awkward Pose',
+      'Standing at the top of your mat, inhale and reach your arm forward. \n\nLift your heels up. \n\nSqueeze your inner legs together. \n\nExhale and bend your knees and lower down half-way. \n\nInhale and straighten your legs. \n\nSqueeze your legs together. \n\nExhale and bend your knees and squat down. \n\nInhale and straighten your legs.',
+      'assets/images/10.jpg',
+      'calves'),
+  Excercise(
+      10,
+      '90 Degree Hang',
+      'Do a pull up and hold at 90 degrees using a narrow grip with palms facing each other. \n\nKeep your shoulders away from your ears and try not to hold your breath. \n\nFor more intensity, use a wider grip.',
+      'assets/images/11.jpg',
+      'biceps'),
+  Excercise(
+      11,
+      '3 Point Touches',
+      'Lift one foot just off the floor and tap the floor out in front with your toes and return back to center. \n\nThen, tap your toe out laterally. \n\nFinally, tap your toe straight back. \n\nRepeat, alternating lead legs.',
+      'assets/images/12.jpg',
+      'quads'),
+  Excercise(
+      12,
+      'Advanced Left Pyramid',
+      'Stand facing the top of your mat with your feet 3 feet apart and with your left foot forward. \n\nGrab your opposite elbow behind your back. \n\nInhale and arch your chest forward. \n\nExhale and fold forward over your left leg.',
+      'assets/images/9.jpg',
+      'lats (back)'),
+  Excercise(
+      13,
+      '90 Degree Hang',
+      'Do a pull up and hold at 90 degrees using a narrow grip with palms facing each other. \n\nKeep your shoulders away from your ears and try not to hold your breath. \n\nFor more intensity, use a wider grip.',
+      'assets/images/11.jpg',
+      'lats (back)'),
 ];

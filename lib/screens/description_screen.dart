@@ -1,9 +1,8 @@
 import 'package:dr_fit/models/excercise.dart';
 import 'package:flutter/material.dart';
 
-class ExcerciseDescriptionScreen extends StatelessWidget {
-  const ExcerciseDescriptionScreen({Key? key, required this.data})
-      : super(key: key);
+class DescriptionScreen extends StatelessWidget {
+  const DescriptionScreen({Key? key, required this.data}) : super(key: key);
 
   final Excercise data;
 
