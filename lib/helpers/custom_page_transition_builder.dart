@@ -12,11 +12,8 @@ class CustomPageTransitionBuilder extends PageTransitionsBuilder {
     // if (route.settings.isInitialRoute) {
     //   return child;
     // }
-    return SlideTransition(
-      position: Tween<Offset>(
-        begin: const Offset(-1, 0),
-        end: Offset.zero,
-      ).animate(animation),
+    return SizeTransition(
+      sizeFactor: animation,
       child: child,
     );
   }
