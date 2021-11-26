@@ -2,7 +2,9 @@ import 'package:dr_fit/models/excercise.dart';
 import 'package:dr_fit/models/excercise_category.dart';
 import 'package:dr_fit/screens/list_screen.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:dr_fit/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class ExcerciseCategoryScreen extends StatelessWidget {
   const ExcerciseCategoryScreen({Key? key}) : super(key: key);
@@ -12,6 +14,10 @@ class ExcerciseCategoryScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        // backgroundColor: Constants.appBarColor,
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+        ),
         title: const Text('Excercise'),
         elevation: 0,
       ),
