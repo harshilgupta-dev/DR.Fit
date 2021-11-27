@@ -1,11 +1,10 @@
-import 'package:dr_fit/models/excercise.dart';
 import 'package:dr_fit/screens/description_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class ListScreen extends StatelessWidget {
   const ListScreen({Key? key, required this.data}) : super(key: key);
-  final List<Excercise> data;
+  final List data;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,5 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:dr_fit/models/meditation.dart';
 import 'package:dr_fit/screens/excercise_category_screen.dart';
+import 'package:dr_fit/screens/list_screen.dart';
 import 'package:dr_fit/screens/login_screen.dart';
 import 'package:dr_fit/utils/authentication_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -111,7 +113,11 @@ class HomeScreen extends StatelessWidget {
                     CategoryCard(
                       title: 'Meditation',
                       imagepath: 'icons/Meditation.svg',
-                      press: () {},
+                      press: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (ctx) =>
+                                ListScreen(data: meditationList)));
+                      },
                     ),
                     CategoryCard(
                         title: 'Yoga',
