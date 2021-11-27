@@ -1,13 +1,16 @@
 import 'package:dr_fit/screens/home_screen.dart';
 import 'package:dr_fit/screens/product_screen.dart';
 import 'package:dr_fit/utils/constants.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
 import 'add_to_cart.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+  const MainPage({Key? key, this.user}) : super(key: key);
+
+  final User? user;
   @override
   _MainPageState createState() => _MainPageState();
 }
@@ -22,11 +25,15 @@ class _MainPageState extends State<MainPage> {
       backgroundColor: kBackgroundColor,
       body: IndexedStack(
         index: currentIndex,
-        children: const [
-          HomeScreen(),
-          ProductsScreen(),
-          AddToCart(),
-          HomeScreen()
+        children: [
+          HomeScreen(
+            user: widget.user,
+          ),
+          const ProductsScreen(),
+          const AddToCart(),
+          HomeScreen(
+            user: widget.user,
+          )
         ],
       ),
       bottomNavigationBar: BottomNavyBar(

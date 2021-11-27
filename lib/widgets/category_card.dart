@@ -20,8 +20,8 @@ class CategoryCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(10),
       margin: const EdgeInsets.all(10),
-      height: size.height * .25,
-      width: size.width * .415,
+      height: size.height * .24,
+      width: size.width * .4,
       decoration: BoxDecoration(
         boxShadow: const [
           BoxShadow(
@@ -40,13 +40,16 @@ class CategoryCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SvgPicture.asset(imagepath),
+            SvgPicture.asset(
+              imagepath,
+              height: size.height * .10,
+            ),
             const SizedBox(
-              height: 40,
+              height: 25,
             ),
             Text(
               title,
-              style: Theme.of(context).textTheme.button,
+              style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
             )
           ],
         ),

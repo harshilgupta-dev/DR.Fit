@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:dr_fit/screens/mainpage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -24,7 +25,9 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
           builder: (context) => FirebaseAuth.instance.currentUser != null
-              ? const MainPage()
+              ? MainPage(
+                  user: FirebaseAuth.instance.currentUser,
+                )
               : const LoginScreen(),
         ));
   }
@@ -32,6 +35,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 0,
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+        ),
+      ),
       backgroundColor: Colors.white,
       body: TweenAnimationBuilder(
         curve: Curves.bounceIn,

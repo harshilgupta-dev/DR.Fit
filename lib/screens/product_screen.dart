@@ -1,3 +1,5 @@
+import 'package:flutter/services.dart';
+
 import './add_to_cart.dart';
 import '../utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +17,14 @@ class _ProductsScreenState extends State<ProductsScreen> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 0,
+        elevation: 0,
+        backgroundColor: const Color(0xFF71DFE7),
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+        ),
+      ),
       backgroundColor: kBackgroundColor,
       body: SingleChildScrollView(
         child: Stack(

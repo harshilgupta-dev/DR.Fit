@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class AddToCart extends StatelessWidget {
   const AddToCart({Key? key}) : super(key: key);
@@ -7,6 +8,9 @@ class AddToCart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+        ),
         backgroundColor: const Color(0xFF71DFE7),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
