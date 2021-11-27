@@ -1,5 +1,6 @@
 import 'package:dr_fit/models/excercise.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class DescriptionScreen extends StatelessWidget {
   const DescriptionScreen({Key? key, required this.data}) : super(key: key);
@@ -11,6 +12,9 @@ class DescriptionScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+        ),
         title: Text(data.name),
         elevation: 0,
       ),

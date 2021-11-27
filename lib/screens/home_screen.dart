@@ -70,10 +70,13 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Text(
-                  'Hello,\n${FirebaseAuth.instance.currentUser!.displayName!.split(' ')[0]}',
-                  style: const TextStyle(
-                      fontWeight: FontWeight.w900, fontSize: 40),
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Text(
+                    'Hello,\n${FirebaseAuth.instance.currentUser!.displayName!.split(' ')[0]}',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w900, fontSize: 40),
+                  ),
                 )
               ],
             ),
