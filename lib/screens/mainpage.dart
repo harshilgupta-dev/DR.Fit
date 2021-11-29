@@ -1,9 +1,11 @@
+import 'package:dr_fit/screens/bmi_input_page.dart';
 import 'package:dr_fit/screens/home_screen.dart';
 import 'package:dr_fit/screens/product_screen.dart';
 import 'package:dr_fit/utils/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'add_to_cart.dart';
 
@@ -31,9 +33,10 @@ class _MainPageState extends State<MainPage> {
           ),
           const ProductsScreen(),
           const AddToCart(),
+          InputPage(),
           HomeScreen(
             user: widget.user,
-          )
+          ),
         ],
       ),
       bottomNavigationBar: BottomNavyBar(
@@ -62,6 +65,12 @@ class _MainPageState extends State<MainPage> {
               inactiveColor: Colors.black,
               activeColor: const Color(0xFFF8BBD0),
               title: const Text('Chat'),
+            ),
+            BottomNavyBarItem(
+              icon: const FaIcon(FontAwesomeIcons.calculator),
+              inactiveColor: Colors.black,
+              activeColor: Colors.amber,
+              title: const Text('BMI'),
             ),
             BottomNavyBarItem(
               icon: const Icon(Icons.supervised_user_circle_sharp),
