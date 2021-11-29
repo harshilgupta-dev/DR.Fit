@@ -32,8 +32,8 @@ class _MainPageState extends State<MainPage> {
             user: widget.user,
           ),
           const ProductsScreen(),
-          const AddToCart(),
           InputPage(),
+          const AddToCart(),
           HomeScreen(
             user: widget.user,
           ),
@@ -61,16 +61,16 @@ class _MainPageState extends State<MainPage> {
               title: const Text('Shopping'),
             ),
             BottomNavyBarItem(
-              icon: const Icon(Icons.chat),
-              inactiveColor: Colors.black,
-              activeColor: const Color(0xFFF8BBD0),
-              title: const Text('Chat'),
-            ),
-            BottomNavyBarItem(
               icon: const FaIcon(FontAwesomeIcons.calculator),
               inactiveColor: Colors.black,
               activeColor: Colors.amber,
               title: const Text('BMI'),
+            ),
+            BottomNavyBarItem(
+              icon: const Icon(Icons.chat),
+              inactiveColor: Colors.black,
+              activeColor: const Color(0xFFF8BBD0),
+              title: const Text('Chat'),
             ),
             BottomNavyBarItem(
               icon: const Icon(Icons.supervised_user_circle_sharp),
