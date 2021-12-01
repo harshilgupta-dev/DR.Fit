@@ -1,4 +1,5 @@
 import 'package:dr_fit/screens/bmi_input_page.dart';
+import 'package:dr_fit/screens/chat_screen.dart';
 import 'package:dr_fit/screens/home_screen.dart';
 import 'package:dr_fit/screens/product_screen.dart';
 import 'package:dr_fit/utils/constants.dart';
@@ -33,7 +34,7 @@ class _MainPageState extends State<MainPage> {
           ),
           const ProductsScreen(),
           InputPage(),
-          const AddToCart(),
+          ChatScreen(),
           HomeScreen(
             user: widget.user,
           ),
@@ -69,15 +70,9 @@ class _MainPageState extends State<MainPage> {
             BottomNavyBarItem(
               icon: const Icon(Icons.chat),
               inactiveColor: Colors.black,
-              activeColor: const Color(0xFFF8BBD0),
+              activeColor: Colors.lightBlueAccent,
               title: const Text('Chat'),
             ),
-            BottomNavyBarItem(
-              icon: const Icon(Icons.supervised_user_circle_sharp),
-              inactiveColor: Colors.black,
-              activeColor: const Color(0xFFF8BBD0),
-              title: const Text('Profile'),
-            )
           ]),
     );
   }
