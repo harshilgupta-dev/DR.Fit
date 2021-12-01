@@ -1,4 +1,3 @@
-import '../screens/bmi_input_page.dart';
 import '../utils/bmi_constants.dart';
 import '../bmi_components/reusable_card.dart';
 import 'package:flutter/material.dart';
