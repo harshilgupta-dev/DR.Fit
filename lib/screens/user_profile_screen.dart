@@ -4,6 +4,7 @@ import 'package:dr_fit/screens/login_screen.dart';
 import 'package:dr_fit/utils/authentication_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 
 class UserProfileScreen extends StatelessWidget {
@@ -123,6 +124,7 @@ customCard(text, context) {
         text,
         style: const TextStyle(
           fontSize: 17,
+          fontWeight: FontWeight.w500,
         ),
       ),
     ),
