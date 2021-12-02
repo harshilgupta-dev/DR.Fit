@@ -38,7 +38,6 @@ class _ChatScreenState extends State<ChatScreen> {
       final user = _auth.currentUser;
       if (user != null) {
         loggedInUser = user;
-        print(loggedInUser.email);
       }
     } catch (e) {
       // ignore: avoid_print
@@ -53,6 +52,12 @@ class _ChatScreenState extends State<ChatScreen> {
     super.initState();
     getCurrentUser();
     getData();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    messageTextController.dispose();
   }
 
   @override
