@@ -111,7 +111,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
                             FaIcon(
-                              FontAwesomeIcons.google,
+                              FontAwesomeIcons.googlePlusG,
                             ),
                             SizedBox(
                               width: 10,
@@ -119,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             Text(
                               'Sign In with Google',
                               textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 25),
+                              style: TextStyle(fontSize: 24),
                             ),
                           ],
                         ),
