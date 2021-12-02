@@ -96,9 +96,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           _loading = false;
                         });
                         if (FirebaseAuth.instance.currentUser != null) {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (ctx) => const MainPage()));
+                          Navigator.of(context)
+                              .pushReplacement(MaterialPageRoute(
+                                  builder: (ctx) => MainPage(
+                                        user: FirebaseAuth.instance.currentUser,
+                                      )));
                         }
                       },
                       child: Container(
