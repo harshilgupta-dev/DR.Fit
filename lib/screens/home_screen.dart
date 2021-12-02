@@ -2,8 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dr_fit/models/meditation.dart';
 import 'package:dr_fit/screens/excercise_category_screen.dart';
 import 'package:dr_fit/screens/list_screen.dart';
-import 'package:dr_fit/screens/login_screen.dart';
-import 'package:dr_fit/utils/authentication_service.dart';
+import 'package:dr_fit/screens/user_profile_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -14,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   final User? user;
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 0,
@@ -47,29 +46,40 @@ class HomeScreen extends StatelessWidget {
                   alignment: Alignment.topRight,
                   child: InkWell(
                     onTap: () {
-                      AuthenticationService.signOut(context: context)
-                          .whenComplete(() => Navigator.of(context)
-                              .pushReplacement(MaterialPageRoute(
-                                  builder: (ctx) => const LoginScreen())));
+                      // AuthenticationService.signOut(context: context)
+                      //     .whenComplete(() => Navigator.of(context)
+                      //         .pushReplacement(MaterialPageRoute(
+                      //             builder: (ctx) => const LoginScreen())));
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (ctx) => UserProfileScreen(
+                                user: user,
+                              )));
                     },
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 42,
-                      width: 42,
-                      decoration: const BoxDecoration(
-                        color: Color(0xFFF2BEA1),
-                        shape: BoxShape.circle,
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(25),
-                        child: Image(
-                          fit: BoxFit.cover,
-                          image: CachedNetworkImageProvider(FirebaseAuth
-                              .instance.currentUser!.photoURL
-                              .toString()),
-                        ),
-                      ),
+                    child: CircleAvatar(
+                      backgroundColor: const Color(0xFFF5CEB8),
+                      maxRadius: 23,
+                      backgroundImage: CachedNetworkImageProvider(FirebaseAuth
+                          .instance.currentUser!.photoURL
+                          .toString()),
                     ),
+                    // child: Container(
+                    //   alignment: Alignment.center,
+                    //   height: 42,
+                    //   width: 42,
+                    //   decoration: const BoxDecoration(
+                    //     color: Color(0xFFF2BEA1),
+                    //     shape: BoxShape.circle,
+                    //   ),
+                    //   child: ClipRRect(
+                    //     borderRadius: BorderRadius.circular(25),
+                    //     child: Image(
+                    //       fit: BoxFit.cover,
+                    //       image: CachedNetworkImageProvider(FirebaseAuth
+                    //           .instance.currentUser!.photoURL
+                    //           .toString()),
+                    //     ),
+                    //   ),
+                    // ),
                   ),
                 ),
                 Padding(

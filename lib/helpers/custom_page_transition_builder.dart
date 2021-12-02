@@ -12,8 +12,9 @@ class CustomPageTransitionBuilder extends PageTransitionsBuilder {
     // if (route.settings.isInitialRoute) {
     //   return child;
     // }
-    return SizeTransition(
-      sizeFactor: animation,
+    return FadeTransition(
+      opacity: animation,
+      // sizeFactor: animation,
       child: child,
     );
   }

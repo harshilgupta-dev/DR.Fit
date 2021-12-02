@@ -47,9 +47,15 @@ class DescriptionScreen extends StatelessWidget {
             height: 30,
           ),
           Container(
+            height: MediaQuery.of(context).size.height * 0.35,
             margin: const EdgeInsets.symmetric(horizontal: 25),
-            child: Text(
-              data.step,
+            padding: const EdgeInsets.all(8),
+            decoration:
+                BoxDecoration(border: Border.all(width: 1, color: Colors.grey)),
+            child: SingleChildScrollView(
+              child: Text(
+                data.step,
+              ),
             ),
           )
         ],
