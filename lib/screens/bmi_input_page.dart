@@ -46,7 +46,6 @@ class _InputPageState extends State<InputPage> {
                 child: ResuableCard(
                   onPress: () {
                     setState(() {
-                      print('Male Button Pressed');
                       selectedGender = Gender.male;
                     });
                   },
@@ -63,7 +62,6 @@ class _InputPageState extends State<InputPage> {
                 child: ResuableCard(
                   onPress: () {
                     setState(() {
-                      print('FeMale Button Pressed');
                       selectedGender = Gender.female;
                     });
                   },
@@ -124,7 +122,6 @@ class _InputPageState extends State<InputPage> {
                           setState(() {
                             height = newValue;
                           });
-                          print(newValue);
                         },
                       ),
                     )
@@ -266,7 +263,7 @@ class RoundIconButton extends StatelessWidget {
       elevation: 1,
       shape: const CircleBorder(),
       fillColor: Colors.black26,
-      constraints: const BoxConstraints.tightFor(width: 50.0, height: 50.0),
+      constraints: const BoxConstraints.tightFor(width: 40.0, height: 40.0),
       child: Icon(icon),
       onPressed: onPressed,
     );
