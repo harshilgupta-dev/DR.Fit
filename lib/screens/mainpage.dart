@@ -74,7 +74,7 @@ class _MainPageState extends State<MainPage> {
             BottomNavyBarItem(
               icon: const Icon(Icons.supervised_user_circle),
               inactiveColor: Colors.black,
-              activeColor: const Color(0xFFF5CEB8),
+              activeColor: Colors.lightBlue,
               title: const Text('Profile'),
             ),
           ]),
