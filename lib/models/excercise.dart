@@ -48,7 +48,7 @@ List<Excercise> excerciseList = [
       'triceps'),
   Excercise(
       7,
-      'uare Single Leg Hops',
+      'Single Leg Hops',
       'Stand on one leg with the other leg bent at 90 degrees in front of you and your hands on your hips. \n\nCreate an imaginary square around you. \n\nHop on one leg to each of the four corners, hopping back to the middle before proceeding to the next corner. \n\nSwitch legs halfway through the exercise!',
       'assets/images/8.png',
       'hamstrings'),
