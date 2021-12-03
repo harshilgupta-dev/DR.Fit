@@ -8,11 +8,12 @@ class ListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color.fromRGBO(247, 247, 247, .96),
       appBar: AppBar(
         systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
         ),
+        backgroundColor: Colors.teal,
         title: Text(data[0].category.toUpperCase()),
         elevation: 0,
       ),
@@ -22,11 +23,13 @@ class ListScreen extends StatelessWidget {
           itemCount: data.length,
           itemBuilder: (ctx, i) {
             return Card(
-              elevation: 2,
+              margin: EdgeInsets.symmetric(vertical: 8),
+              elevation: 10,
               child: ListTile(
                 minVerticalPadding: 25,
                 title: Text(
                   data[i].name,
+                  style: TextStyle(fontWeight: FontWeight.w500),
                 ),
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(

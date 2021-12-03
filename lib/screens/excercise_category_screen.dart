@@ -17,6 +17,7 @@ class ExcerciseCategoryScreen extends StatelessWidget {
         systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
         ),
+        backgroundColor: Colors.teal,
         title: const Text('Excercise'),
         elevation: 0,
       ),
@@ -32,7 +33,7 @@ class ExcerciseCategoryScreen extends StatelessWidget {
           itemCount: excercises.length,
           itemBuilder: (ctx, i) {
             return ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(15),
               child: InkWell(
                 borderRadius: BorderRadius.circular(20),
                 overlayColor: MaterialStateProperty.all(Colors.black),

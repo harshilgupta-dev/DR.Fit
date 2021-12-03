@@ -15,7 +15,7 @@ class UserProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color.fromRGBO(247, 247, 247, .9),
+      backgroundColor: const Color.fromRGBO(247, 247, 247, .9),
       body: Stack(
         alignment: Alignment.center,
         children: [

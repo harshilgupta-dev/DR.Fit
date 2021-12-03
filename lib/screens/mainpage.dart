@@ -1,5 +1,5 @@
 import 'package:dr_fit/screens/bmi_input_page.dart';
-import 'package:dr_fit/screens/chat_screen.dart';
+
 import 'package:dr_fit/screens/home_screen.dart';
 import 'package:dr_fit/screens/product_screen.dart';
 import 'package:dr_fit/screens/user_profile_screen.dart';
