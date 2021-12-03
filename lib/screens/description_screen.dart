@@ -12,10 +12,14 @@ class DescriptionScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.teal,
         systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
         ),
-        title: Text(data.name),
+        title: Text(
+          data.name,
+          style: const TextStyle(letterSpacing: 1, fontFamily: 'Cairo'),
+        ),
         elevation: 0,
       ),
       body: Column(
@@ -27,34 +31,40 @@ class DescriptionScreen extends StatelessWidget {
                 tag: 'location-${data.image}-${data.id}',
                 child: Image(
                   image: AssetImage(data.image),
+                  width: MediaQuery.of(context).size.width * 0.7,
                   height: MediaQuery.of(context).size.height * 0.3,
                 ),
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          Text(
-            data.name,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-              decoration: TextDecoration.underline,
-            ),
-          ),
-          const SizedBox(
-            height: 30,
-          ),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.35,
-            margin: const EdgeInsets.symmetric(horizontal: 25),
-            padding: const EdgeInsets.all(8),
-            decoration:
-                BoxDecoration(border: Border.all(width: 1, color: Colors.grey)),
-            child: SingleChildScrollView(
-              child: Text(
-                data.step,
+          Card(
+            elevation: 20,
+            child: Container(
+              width: MediaQuery.of(context).size.width * .7,
+              height: MediaQuery.of(context).size.height * 0.5,
+              margin: const EdgeInsets.symmetric(horizontal: 25),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Text(
+                      data.name,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 22,
+                          color: Colors.teal,
+                          letterSpacing: 1,
+                          fontFamily: 'Cairo'),
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Text(
+                      data.step,
+                      style: const TextStyle(fontWeight: FontWeight.w600),
+                    ),
+                  ],
+                ),
               ),
             ),
           )
