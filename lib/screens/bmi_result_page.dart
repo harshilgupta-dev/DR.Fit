@@ -1,4 +1,5 @@
 import 'package:dr_fit/helpers/shared_prefrences.dart';
+import 'package:dr_fit/models/normal.dart';
 import 'package:dr_fit/models/overweight.dart';
 import 'package:dr_fit/models/underweight.dart';
 import 'package:dr_fit/screens/diet_recommendation_screen.dart';
@@ -33,7 +34,7 @@ class ResultPage extends StatelessWidget {
     } else if (resultText == 'Overweight') {
       data = overWeightList;
     } else if (resultText == 'Normal') {
-      data = overWeightList;
+      data = normalWeightList;
     } else {
       data = underWeightList;
     }
