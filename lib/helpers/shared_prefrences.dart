@@ -24,4 +24,10 @@ class SharedPrefrencesHelper {
     // print(value);
     return value;
   }
+
+  Future<String?> getStringPrefrences(String key) async {
+    SharedPreferences _prefs = await SharedPreferences.getInstance();
+    String? value = _prefs.getString(key);
+    return value;
+  }
 }
