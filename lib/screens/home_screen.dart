@@ -1,5 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:dr_fit/helpers/shared_prefrences.dart';
 import 'package:dr_fit/models/meditation.dart';
+import 'package:dr_fit/models/normal.dart';
+import 'package:dr_fit/models/overweight.dart';
+import 'package:dr_fit/models/underweight.dart';
+import 'package:dr_fit/models/yoga.dart';
 import 'package:dr_fit/screens/excercise_category_screen.dart';
 import 'package:dr_fit/screens/list_screen.dart';
 import 'package:dr_fit/screens/user_profile_screen.dart';
@@ -7,12 +12,21 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../widgets/category_card.dart';
+import 'diet_recommendation_screen.dart';
 
+// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key, this.user}) : super(key: key);
+  HomeScreen({Key? key, this.user}) : super(key: key);
   final User? user;
+  final SharedPrefrencesHelper _prefrencesHelper = SharedPrefrencesHelper();
+  late String? bmiResultText;
+  getData() async {
+    bmiResultText = await _prefrencesHelper.getStringPrefrences('resultText');
+  }
+
   @override
   Widget build(BuildContext context) {
+    getData();
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
@@ -105,7 +119,26 @@ class HomeScreen extends StatelessWidget {
                     CategoryCard(
                       title: 'Diet Recommendation',
                       imagepath: 'icons/Hamburger.svg',
-                      press: () {},
+                      press: () {
+                        String? text = bmiResultText;
+                        if (text == 'Underweight') {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (ctx) => const DietRecommendationScreen(
+                                  data: underWeightList)));
+                        } else if (text == 'Overweight') {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (ctx) => const DietRecommendationScreen(
+                                  data: overWeightList)));
+                        } else if (text == 'Normal') {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (ctx) => const DietRecommendationScreen(
+                                  data: normalWeightList)));
+                        } else {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (ctx) =>
+                                  const DietRecommendationScreen(data: [])));
+                        }
+                      },
                     ),
                     CategoryCard(
                       title: 'Exercises',
@@ -132,7 +165,10 @@ class HomeScreen extends StatelessWidget {
                     CategoryCard(
                         title: 'Yoga',
                         imagepath: 'icons/yoga.svg',
-                        press: () {}),
+                        press: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (ctx) => ListScreen(data: yogaList)));
+                        }),
                   ],
                 )
               ],

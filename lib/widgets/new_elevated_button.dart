@@ -22,7 +22,7 @@ class NewElevatedButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(elevation: 10, primary: color),
         onPressed: press,
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+          padding: const EdgeInsets.symmetric(vertical: 10),
           width: size.width * .8,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,

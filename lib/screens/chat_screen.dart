@@ -19,6 +19,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   final SharedPrefrencesHelper _prefrencesHelper = SharedPrefrencesHelper();
 
+  // ignore: prefer_typing_uninitialized_variables
   late final loggedInUser;
 
   final _firestore = FirebaseFirestore.instance;
