@@ -19,7 +19,7 @@ const List<NormalWeight> normalWeightList = [
       'Day One',
       'assets/images/underweight/dayone.jpg',
       'Breakfast\nPeanut Butter on Wholegrain Toast: Toasted wholegrain bread+ 2 tbsp peanut butter. Drizzle with honey to taste. Serve with 1 hot chocolate, made with milk + 1 serve of fruit (eg. 1 medium pear or orange).\n\nLunch \nChicken and Pasta Salad: Cooked chicken + pasta + 1 cup leafy green vegetables (eg. spinach, rocket) + tomato + avocado + crumbled feta cheese + olive oil/vinegar dressing.\n\nDinner\nLamb Chops and Vegetables: Lamb chop, trimmed & shallow fried in olive oil. Serve with sweet potato mash made with milk and olive oil + 2 cups cooked vegetables.\n\nDessert/Supper\nFresh Fruit and Cheese Platter: Slice and serve a variety of fresh fruits in season and cheese.\n\nSnacks\nA handful of mixed nuts and/or seeds.',
-      'Normalweight'),
+      'Normal Weight'),
   NormalWeight(
       2,
       'Day Two',
