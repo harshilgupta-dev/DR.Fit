@@ -66,6 +66,9 @@ flutter:
   assets:
     - assets/images/
     - assets/images/meditation/
+    - assets/images/yoga/
+    - assets/images/underweight/
+    - assets/images/overweight/
     - images/
     - icons/
     

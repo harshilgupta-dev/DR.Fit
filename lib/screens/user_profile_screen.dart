@@ -71,8 +71,10 @@ class UserProfileScreen extends StatelessWidget {
                   color: Colors.blue,
                   icon: FontAwesomeIcons.facebookMessenger,
                   press: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ChatScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ChatScreen()));
                   },
                 ),
                 SizedBox(
