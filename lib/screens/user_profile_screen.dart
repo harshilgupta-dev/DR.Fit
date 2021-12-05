@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:dr_fit/screens/about_us.dart';
 import 'package:dr_fit/screens/chat_screen.dart';
 import 'package:dr_fit/screens/contact_us_screen.dart';
 import 'package:dr_fit/screens/login_screen.dart';
@@ -85,7 +86,10 @@ class UserProfileScreen extends StatelessWidget {
                   label: 'About Us',
                   color: Colors.black,
                   icon: FontAwesomeIcons.infoCircle,
-                  press: () {},
+                  press: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => AboutUs()));
+                  },
                 ),
                 SizedBox(
                   height: size.height * .010,
