@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dr_fit/screens/chat_screen.dart';
+import 'package:dr_fit/screens/contact_us_screen.dart';
 import 'package:dr_fit/screens/login_screen.dart';
 import 'package:dr_fit/utils/authentication_service.dart';
 import 'package:dr_fit/widgets/new_elevated_button.dart';
@@ -93,7 +94,12 @@ class UserProfileScreen extends StatelessWidget {
                   label: 'Contact Us',
                   color: Colors.black,
                   icon: FontAwesomeIcons.phoneAlt,
-                  press: () {},
+                  press: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ContactUsScreen()));
+                  },
                 ),
                 SizedBox(
                   height: size.height * .030,
